@@ -1,10 +1,12 @@
 # CMTTHE04 Week3 oefening 1
 
-## Pong
-
 Startproject voor Pong in Typescript
 
-### Beweeg de bal
+<br>
+<br>
+<br>
+
+## Beweeg de bal
 
 Bestudeer de opzet van het project: game roept de update functie van de bal aan. Maak de volgende aanpassingen:
 
@@ -14,7 +16,11 @@ Bestudeer de opzet van het project: game roept de update functie van de bal aan.
 - Geef de bal twee nieuwe variabelen: `xspeed` en `yspeed`. Zet deze op 1.
 - In de update functie tel je `xspeed` op bij `x` en `yspeed` bij `y`.
 
-### Hou de bal binnen het scherm
+<br>
+<br>
+<br>
+
+## Hou de bal binnen het scherm
 
 De breedte en hoogte van het scherm kan je opvragen met `window.innerWidth` en `window.innerHeight`. 
 
@@ -29,7 +35,11 @@ De breedte en hoogte van het scherm kan je opvragen met `window.innerWidth` en `
 - Plaats een aantal ballen in de array met `this.balls.push(new Ball())`. Experimenteer met het aantal ballen.
 - Update alle ballen in de gameloop van game.ts
 
-### Paddle
+<br>
+<br>
+<br>
+
+## Paddle
 
 - Het project bevat een `paddle.ts` class. Voeg een paddle instance toe aan Game.ts!
 - Vergeet niet de paddle te updaten, net zoals de ballen.
@@ -37,18 +47,30 @@ De breedte en hoogte van het scherm kan je opvragen met `window.innerWidth` en `
 - Voeg in game.ts collision detection toe tussen de balls en de paddle. 
 - Toon een bericht in de console als een bal de paddle raakt.
 
-### De game af maken
+<br>
+<br>
+<br>
 
-- De bal stuitert niet meer terug als die links uit beeld gaat. 
-- De bal stuitert wel terug naar rechts als de bal de paddle raakt.
+## De game af maken
+
+- De bal stuitert *niet* terug als die links uit beeld gaat. 
+- De bal stuitert *wel* terug als de bal de paddle raakt.
 - Kan je de bal steeds sneller laten gaan, naar mate die vaker geraakt wordt?
 - Kan je een score updaten en tonen nadat de ball de paddle heeft geraakt?
 
-### Multiplayer
+<br>
+<br>
+<br>
+
+## Multiplayer
 
 - Kan je twee paddles toevoegen die elk hun eigen keyboard controls hebben? 
 
-### Voorbeeldcode
+<br>
+<br>
+<br>
+
+## Voorbeeldcode
 
 - [Collision detection](https://github.com/HR-CMGT/Typescript/blob/master/snippets/collision.md)
 - [Keyboard input](https://github.com/HR-CMGT/Typescript/blob/master/snippets/movement.md)

@@ -1,4 +1,4 @@
-class Ball {
+export class Ball {
     
     private div : HTMLElement
     private x : number

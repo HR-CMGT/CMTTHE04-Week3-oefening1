@@ -1,11 +1,11 @@
-class Paddle {
+export class Paddle {
 
     private div: HTMLElement
     private x: number
     private y: number
 
-    private downkey: number
-    private upkey: number
+    private downkey: string
+    private upkey: string
 
     private downSpeed: number = 0
     private upSpeed: number = 0
@@ -16,8 +16,8 @@ class Paddle {
         let game = document.getElementsByTagName("game")[0]
         game.appendChild(this.div)
 
-        this.upkey   = 87
-        this.downkey = 83
+        this.upkey   = "ArrowUp"
+        this.downkey = "ArrowDown"
 
         this.x = 0
         this.y = 200
@@ -31,10 +31,10 @@ class Paddle {
     }
 
     private onKeyDown(e: KeyboardEvent): void {
-        // Hiermee kan je checken welke keycode achter een bepaalde toets zit. 
-        console.log(e.keyCode)
+        // log het toetsenbord:
+        console.log(e.key)
 
-        switch (e.keyCode) {
+        switch (e.key) {
             case this.upkey:
                 this.upSpeed = 5
                 break
@@ -45,7 +45,7 @@ class Paddle {
     }
 
     private onKeyUp(e: KeyboardEvent): void {
-        switch (e.keyCode) {
+        switch (e.key) {
             case this.upkey:
                 this.upSpeed = 0
                 break
@@ -56,11 +56,7 @@ class Paddle {
     }
 
     public update() {
-        let newY = this.y - this.upSpeed + this.downSpeed
-
-        // check of de paddle binnen beeld blijft
-        if (newY > 0 && newY + 100 < window.innerHeight) this.y = newY
-
+        this.y = this.y - this.upSpeed + this.downSpeed
         this.div.style.transform = `translate(${this.x}px, ${this.y}px)`
     }
 
